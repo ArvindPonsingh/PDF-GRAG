@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to GraphRAG Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Upload Documents</h2>
+                </div>
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" id="pdf-files" name="pdf_files" accept=".pdf" multiple>
+                <button type="submit">Upload PDF</button>
+            </form>
+            <div id="upload-status"></div>
+            <button id="generate-graph-btn" class="sidebar-button" style="display: none;">Generate Graph in Neo4j</button>
+            <div id="graph-status"></div>
+            <hr>
+            <h3>Uploaded Documents (<span id="doc-count">0</span>)</h3>
+            <ul id="uploaded-docs-list"></ul>
+        </aside>
+
+        <main class="chat-area">
+            <header class="chat-header">
+                <h2>GraphChat Assistant</h2>
+                <button id="clear-chat-btn" class="icon-button" title="Clear Chat History">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </header>
+            <div class="chat-messages" id="chat-messages">
+                </div>
+            <div class="chat-input-container">
+                <input type="text" id="user-question" placeholder="Ask a question about your documents...">
+                <button id="send-btn" class="icon-button"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
