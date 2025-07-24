@@ -29,4 +29,6 @@ The frontend is built with Flask, HTML, CSS, and JavaScript, providing a user-fr
 * **Database:**
     * Neo4j Graph Database
 
-## Project Structure
+https://github.com/user-attachments/assets/521d8d8c-266e-47b8-9eb7-8afff5eed012
+
+c-4560-a09f-0027ed884efb" />
